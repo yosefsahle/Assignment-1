@@ -26,17 +26,26 @@ namespace Assignment_1
             string rev= "";
             Console.WriteLine("Inpute Your String");
             string name = Console.ReadLine();
+            string cap ="";
+            for (int i=0;i<name.Length;i++){
+                if (name[i]>='a'&&name[i]<='z'){
+                    cap += (char)(name[i]-32 );
+                }
+                else{
+                    cap += name[i];
+                }
+            }
 
-            length = name.Length -1;
+            length = cap.Length -1;
             while(length>=0)
             {
-                rev = rev + name[length];
+                rev = rev + cap[length];
                 length --;
 
             }
             
             
-            if(name==rev){
+            if(cap==rev){
                 Console.WriteLine("\n_________________________________\n\n>>> "+name+" is palindrome String<<< \n_________________________________");
                 menu();
             }
