@@ -86,8 +86,13 @@ namespace Assignment_1
                 menu();
             }
 
+            static void substring(){Console.WriteLine("substring");}
+            static void largint(){Console.WriteLine("largest integer");}
+            static void twoone(){Console.WriteLine("twoone");}
+            static void hourmun(){Console.WriteLine("hourmun");}
+
             static void menu(){
-                Console.WriteLine("\nplease select number\n 1. Revers String\n 2. check palindrome\n 3. Reverse word Order \n 4. count Occurence of Word\n 5. exit");
+                Console.WriteLine("\nplease select number\n 1. Revers String\n 2. check palindrome\n 3. Reverse word Order \n 4. count Occurence of Word\n 5. Substring\n 6. second largest integer\n 7. Two dimensional to one dimensional\n 8. angel b/n hour and minute\n 9. Exit");
            string N = Console.ReadLine();
            if (N=="1"){
                Revers();
@@ -100,14 +105,39 @@ namespace Assignment_1
                 if (N == "3"){
                     Wordor();
                 }
-                if (N == "4"){
+                else{
+                    if (N == "4"){
                     countoccr();
                 }
-                if (N == "5"){
-                    Console.WriteLine("thank You");
+                else{
+                    if (N == "5"){
+                    substring();
                 }
-                else { Console.WriteLine("\n>>>please Input the correct nember<<<\n");
-            menu();}
+                else{
+                    if(N=="6"){
+                        largint();
+                    }
+                    else{
+                        if(N=="7"){
+                            twoone();
+                        }
+                        else{
+                            if(N=="8"){
+                                hourmun();
+                            }
+                            else{
+                                if(N=="9"){
+                                    Console.WriteLine("Thank You");
+                                }
+                                else { Console.WriteLine("\n>>>please Input the correct nember<<<\n");
+                                menu();}
+                            }
+                        }
+                    }
+                }
+                }
+                
+                }
             }
            }
             }
