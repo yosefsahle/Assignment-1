@@ -86,7 +86,36 @@ namespace Assignment_1
                 menu();
             }
 
-            static void substring(){Console.WriteLine("substring");}
+            static void substring(){  
+                
+                Console.WriteLine("please write your string");
+                string str = Console.ReadLine();
+                Console.WriteLine("-----------------");
+                int n = str.Length; 
+                for (int len = 1; len <= n; len++)
+            {
+                
+                for (int i = 0; i <= n - len; i++)
+                {
+                    
+                    int j = i + len - 1;
+
+                    for (int k = i; k <= j; k++) 
+                    System.Console.Write(str[k]);
+                    System.Console.WriteLine();
+                    
+                }
+                
+            }
+            Console.WriteLine("To Check another task press 1");
+            string D = Console.ReadLine();
+            if(D == "1"){menu();}
+            else{
+                Console.WriteLine("thank you");
+            }
+            
+            
+                     }
             static void largint(){Console.WriteLine("largest integer");}
             static void twoone(){Console.WriteLine("twoone");}
             static void hourmun(){Console.WriteLine("hourmun");}
