@@ -121,7 +121,7 @@ namespace Assignment_1
             static void hourmun(){Console.WriteLine("hourmun");}
 
             static void menu(){
-                Console.WriteLine("\nplease select number\n 1. Revers String\n 2. check palindrome\n 3. Reverse word Order \n 4. count Occurence of Word\n 5. Substring\n 6. second largest integer\n 7. Two dimensional to one dimensional\n 8. angel b/n hour and minute\n 9. Exit");
+                Console.WriteLine("\nplease select number\n 1. Revers String                        ||    2. check palindrome\n 3. Reverse word Order                   ||    4. count Occurence of Word\n 5. Substring                            ||    6. second largest integer\n 7. Two dimensional to one dimensional   ||    8. angel b/n hour and minute\n 9. Exit");
            string N = Console.ReadLine();
            if (N=="1"){
                Revers();
