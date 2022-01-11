@@ -107,7 +107,7 @@ namespace Assignment_1
                 }
                 
             }
-            Console.WriteLine("To Check another task press 1");
+            Console.WriteLine("To Check another task press 1 || press anything to exit");
             string D = Console.ReadLine();
             if(D == "1"){menu();}
             else{
@@ -118,7 +118,31 @@ namespace Assignment_1
                      }
             static void largint(){Console.WriteLine("largest integer");}
             static void twoone(){Console.WriteLine("twoone");}
-            static void hourmun(){Console.WriteLine("hourmun");}
+            static void hourmun(){
+
+                try{
+                Console.Write("Enter the hours : ");
+                
+            int hours = int.Parse(Console.ReadLine());
+            
+            Console.Write("Enter the Minutes : ");
+            int minutes = int.Parse(Console.ReadLine());
+            
+            double hourInDegrees = (hours * 30) + (minutes * 30.0 / 60);
+            double minuteInDegrees = minutes * 6;
+            double diff = Math.Abs(hourInDegrees - minuteInDegrees);
+            if (diff > 180)
+            {
+                diff = 360 - diff;
+            }
+            Console.WriteLine($"\n>>> Angle between {hours} hour and {minutes} minute is {diff} degrees <<<");
+            menu();
+            }
+            catch{Console.WriteLine("invalid input please try again\n -----------------");
+            hourmun();
+            
+            }
+            }
 
             static void menu(){
                 Console.WriteLine("\nplease select number\n 1. Revers String                        ||    2. check palindrome\n 3. Reverse word Order                   ||    4. count Occurence of Word\n 5. Substring                            ||    6. second largest integer\n 7. Two dimensional to one dimensional   ||    8. angel b/n hour and minute\n 9. Exit");
